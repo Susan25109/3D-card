@@ -1,0 +1,375 @@
+* {
+  /* border: 1px solid #444; */
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.body {
+  height: 100%;
+  width: 100%;
+}
+.a{
+  color: #222 !important;
+}
+
+.container-bottom {
+  height: 100%;
+  width: 100%;
+  display: flexbox;
+}
+
+/* card */
+
+.color{
+  position: relative;
+  /* margin: 0 auto;
+  height: 100%;
+  width: 100%; */
+}
+.cardContainer {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  perspective-origin: center center;
+  perspective: 50%;
+}
+
+.row-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  margin: 0 auto;
+  /* border: 1px dashed #222222; */
+}
+/* scene */
+.scene {
+  width: 300px;
+  height: 30rem;
+  float: center;
+  /* margin-left: 100px; */
+  perspective: 2000px;
+  margin: auto;
+}
+/* 3D Animation */
+.bigcard {
+  width: 270px;
+  height: 30rem;
+  transform-style: preserve-3d;
+  transform: translateZ(-190px);
+  transition: transform 2000ms;
+}
+
+.bigcard:hover {
+  transform: rotateY(-78deg) translateZ(20px);
+}
+
+.minibar {
+  overflow: hidden;
+}
+
+.bar {
+  width: 1rem;
+  height: 0.5px;
+  background: #fff;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.menu {
+  float: right;
+  padding-bottom: 2rem;
+}
+
+.card {
+  padding: 10px;
+  /* margin:auto; */
+  border: 1px solid #444;
+  background-image: url(images/photography-of-roadway-during-dusk-1034662.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateZ(150px);
+  text-align: center;
+}
+/* 側面內容 */
+.card,
+.rightside {
+  width: 300px;
+  height: 30rem;
+  position: absolute;
+  backface-visibility: hidden;
+}
+.card {
+  overflow-x: hidden;
+}
+
+.rightside {
+  transform: rotateY(90deg) translateZ(150px);
+  border: 1px solid #444;
+  padding: 10px;
+  background: #fff;
+}
+
+.smallMap {
+  width: 230px;
+  height: 50%;
+  margin: auto;
+  border: 1px solid #222;
+}
+
+.smallpic{
+  background-image: url(images/地圖.png);
+  background-repeat: no-repeat;
+  background-size: 230px 100% ;
+}
+.info {
+  width: 220px;
+  height: 30%;
+  margin: auto;
+  /* border: 1px solid #444; */
+}
+
+/* @media only screen and (max-width: 768px) {
+  [class^="col-"] {
+     width: 100%;
+  }
+} */
+
+.shine {
+  /* position: absolute; */
+  border-radius: 3px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn-bottom {
+  margin: auto;
+  text-decoration: none;
+  color: black;
+  font-weight: 650;
+  font-family: "微軟正黑體";
+  border: 1px solid #222;
+}
+
+.shine:hover {
+  text-decoration: none;
+  animation-name: myanimate;
+  animation-duration: 2500ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in;
+}
+
+/* @keyframes myanimate{
+  0%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 9%, rgba(255,255,170,1) 18%, rgba(255,227,82,1) 30%, rgba(235,188,66,1) 36%, rgba(255,255,170,1) 40%,rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(235,188,66,1) 84%);
+  }
+  
+  25%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 9%, rgba(255,255,170,1) 22%, rgba(255,227,82,1) 35%, rgba(235,188,66,1) 41%, rgba(255,255,170,1) 49%,rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(235,188,66,1) 84%);
+  }
+
+  30%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 15%, rgba(255,255,170,1) 32%, rgba(255,227,82,1) 40%, rgba(235,188,66,1) 46%, rgba(255,255,170,1) 57%,rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%);
+  }
+  35%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 18%, rgba(255,255,170,1) 34%, rgba(255,227,82,1) 45%, rgba(235,188,66,1) 51%, rgba(255,255,170,1) 60%,rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%);
+  }
+  40%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 22%, rgba(255,255,170,1) 36%, rgba(255,227,82,1) 46%, rgba(235,188,66,1) 55%, rgba(255,255,170,1) 69%,rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%);
+  }
+
+  50%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 34%, rgba(255,255,170,1) 48%, rgba(255,227,82,1) 55%, rgba(235,188,66,1) 62%, rgba(255,255,170,1) 70%, rgba(235,188,66,1) 78%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%);
+  }
+  
+  60%{
+     background:linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 38%, rgba(255,255,170,1) 51%, rgba(255,227,82,1) 59%, rgba(235,188,66,1) 64%, rgba(255,255,170,1) 77%, rgba(255,227,82,1) 83%, rgba(235,188,66,1) 91%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%);
+  }
+  75%{
+     background:linear-gradient(117deg, rgba(227,163,64,1) 8%, rgba(235,188,66,1) 43%, rgba(255,255,170,1) 55%, rgba(255,227,82,1) 64%, rgba(235,188,66,1) 68%, rgba(255,255,170,1) 80%, rgba(255,227,82,1) 88%, rgba(235,188,66,1) 91%, rgba(235,188,66,1) 100%, rgba(255,227,82,1) 100%) ;
+  }
+  80%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 43%, rgba(255,255,148,1) 61%, rgba(255,227,82,1) 74%, rgba(234,189,71,1) 81%, rgba(255,255,170,1) 93%, rgba(255,227,82,1) 100%, rgba(255,227,82,1) 100%);
+  }
+  90%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 63%, rgba(255,255,148,1) 81%, rgba(255,227,82,1) 89%, rgba(255,227,82,1) 100%, rgba(255,227,82,1) 100%);
+  }
+
+  95%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 75%, rgba(255,255,148,1) 92%, rgba(255,227,82,1) 99%, rgba(255,227,82,1) 100%, rgba(255,227,82,1) 100%);;
+  }
+  100%{
+     background: linear-gradient(117deg, rgba(227,163,64,1) 6%, rgba(235,188,66,1) 90%, rgba(255,255,148,1) 97%, rgba(255,227,82,1) 100%, rgba(255,227,82,1) 100%, rgba(255,227,82,1) 100%);
+  }
+} */
+/* .pic {
+   position: relative;
+  width: 100%;
+  height: 70%;
+  background-image: url(images/man-standing-on-parking-lot-163772.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; 
+} */
+/* .container-pic {
+  position: relative;
+  height: 100%;
+  width: 100%;
+} */
+.fontSide,
+.fontSide h3 {
+  margin-top: 70px;
+  font-family: "微軟正黑體";
+  color: #fff;
+  writing-mode: vertical-rl;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.fontSide h3 {
+  padding-left: 170px;
+  float: right;
+  color: #fff;
+}
+
+.blur {
+  display: block;
+  width: 60px;
+  height: 200px;
+  filter: blur(25px);
+  background: #fff, transparent;
+  border: 1px solid rbg(255, 255, 255, 0.6);
+  margin: auto;
+}
+/* Shadow */
+
+.bigcard::after {
+  content: "";
+  width: 300px;
+  height: 260px;
+  position: absolute;
+  bottom: 0;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg) translateY(130px);
+  transition: box-shadow 350ms;
+}
+
+.bigcard:hover::after {
+  box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* gradient move to footer */
+
+.bottom::after {
+  content: "";
+  /* position: absolute; */
+  bottom: 1;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(to bottom, #a7988b, transparent);
+  z-index: 200px;
+}
+.footerbg-color5::before {
+  content: "";
+  position: absolute;
+  bottom: 1;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(to bottom, #a7988b, transparent);
+  z-index: 100px;
+}
+.color::before {
+  content: "";
+  position: absolute;
+  bottom: -1.5rem;
+  width: 100%;
+  height: 5rem;
+  background: linear-gradient(to top, #a7988b, transparent);
+  z-index: 200px;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  justify-content: center;
+}
+.footerbg-color5 {
+  position: absolute;
+  width: 100%;
+  height: 40vh;
+  background: linear-gradient(to bottom, #79634f, transparent);
+  float: initial;
+}
+.footerrow {
+  position: relative;
+}
+
+.footer-items {
+  padding: 10px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  height: auto;
+  width: 100px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.footer-items ul h3 {
+  font-family: "標楷體";
+  font-weight: 900;
+  color: red;
+}
+
+.footer-items ul li {
+  list-style: none;
+  color: #444;
+}
+
+.brandName {
+  border: 5px solid red;
+  text-align: center;
+}
+
+#butt-content {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.75s,all ease-in-out;
+  position: relative;
+  font-size: 15px;
+  font-weight: 600px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  z-index: 500px;
+}
+.butt-contentAppear{
+  opacity: 1;
+  transform: translateY(0px);  
+}
+
+/* Design Right */
+.designright {
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+}
+.logo {
+  position: absolute;
+  fill: transparent;
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  z-index: 600px;
+  margin: auto;
+}
+
+.declaration {
+  position: absolute;
+  z-index: 700px;
+  margin: auto;
+}
